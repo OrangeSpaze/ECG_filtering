@@ -14,7 +14,7 @@ d = 230;                    %Low pass filter constant
 %%Filters%%
 [b,a] = butter(5,f_cut,'high');             %High pass fitler
 [b2,a2] = butter(4,c.*f_cut,'low');         %Low pass filter
-[b3,a3] = butter(4,230.*f_cut,'low');       %Low pass filter
+[b3,a3] = butter(4,d.*f_cut,'low');       %Low pass filter
 
 %Filtering%
 ecg_ma = movmean(ecg_data,4);               %Moving average filter
