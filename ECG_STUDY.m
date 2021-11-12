@@ -5,6 +5,7 @@ load('ecg_stress_test.mat')
 
 %%Constants%%
 N = length(ecg_data);       %Number of points
+t = 0:1:N-1;                %Plotting time vector
 F_cut = 0.5;                %Cut-off frequency
 F_sample = 250;             %Sampling frequency
 f_cut = F_cut/F_sample;     %Normalized cutoff
